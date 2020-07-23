@@ -1,0 +1,964 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* --------------------------------------menu--------------------------------------------- */
+
+.SesionI,
+.RegistroI {
+    background: #fff;
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    padding: 5px;
+}
+
+.menuI {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    padding: 5px;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logolfm {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.logolfm img {
+    vertical-align: top;
+}
+
+nav .registrar,
+nav .sesionr,
+nav .sesionTer {
+    display: inline-block;
+    text-align: right;
+}
+
+nav .registrar a,
+nav .sesionr a {
+    color: #000;
+    text-decoration: none;
+    padding: 1.5em;
+}
+
+nav .sesionTer a {
+    text-decoration: none;
+    color: #81021A;
+    padding: 5px;
+    margin: 5px;
+    border: #81021A solid 3px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+header .sesionTer a:hover {
+    background: #670A1C;
+    color: #fff;
+}
+
+nav .registrar a:hover,
+nav .sesionr a:hover {
+    text-decoration: none;
+}
+
+header .inicio a {
+    text-decoration: none;
+    color: #81021A;
+    padding: 5px;
+    margin: 5px;
+    border: #81021A solid 3px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+header .inicio a:hover {
+    background: #670A1C;
+    color: #fff;
+}
+
+
+/* ----------------------------------------contenido--------------------------------- */
+
+.landing {
+    min-height: 100vh;
+}
+
+.landing .bloque1 {
+    background: #000;
+    padding: 90px 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.landing .bloque1 .texto {
+    padding: 30px;
+    font-size: 24px;
+}
+
+.landing .bloque1 .primerImg,
+.landing .bloque2 .segundaImg {
+    padding: 30px 20px;
+}
+
+.landing .bloque1 .primerImg img {
+    width: 600px;
+}
+
+.landing .bloque2 {
+    background: #c2c2c2;
+    padding: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.landing .bloque2 .secciones {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+}
+
+.landing .bloque2 .secciones .primera {
+    width: 55%;
+    padding: 60px 20px;
+    font-size: 24px;
+}
+
+.landing .bloque2 .secciones .segunda {
+    width: 45%;
+}
+
+.landing .bloque2 .secciones .segunda img {
+    width: 500px;
+}
+
+.landing .bloque3 {
+    background: #025281;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.landing .bloque3 h2 {
+    padding: 20px 0 0 0;
+}
+
+.landing .bloque3 .secciones {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+}
+
+.landing .bloque3 .primera {
+    width: 40%;
+    padding: 50px 0;
+    /* background: #000; */
+}
+
+.landing .bloque3 .primera img {
+    width: 400px;
+}
+
+.landing .bloque3 .segunda {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.segunda .formularioC {
+    width: 90%;
+    padding: 10px;
+    margin: 0 10px;
+    border: #fff solid 2px;
+}
+
+.formularioC .rowC {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.formularioC .rowC .colC {
+    position: relative;
+    width: 100%;
+    padding: 0 5px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+
+.formularioC .rowC .box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+.formularioC .rowC .box input,
+.formularioC .rowC .textarea textarea {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 5px;
+    z-index: 1;
+    color: #000;
+}
+
+.formularioC .rowC .box .textC {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.formularioC .rowC .box input:focus+.textC,
+.formularioC .rowC .box input:valid+.textC {
+    top: -35px;
+    left: -10px;
+}
+
+.formularioC .rowC .box .lineC {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.formularioC .rowC .box input:focus~.lineC,
+.formularioC .rowC .box input:valid~.lineC {
+    height: 100%;
+}
+
+.formularioC .rowC .box .textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.formularioC .rowC .box .textarea textarea {
+    height: 100%;
+    resize: none;
+}
+
+.formularioC .rowC .box textarea:focus+.textC,
+.formularioC .rowC .box textarea:valid+.textC {
+    top: -35px;
+    left: -10px;
+}
+
+.formularioC .rowC .box textarea:focus~.lineC,
+.formularioC .rowC .box textarea:valid~.lineC {
+    height: 100%;
+}
+
+.formularioC input[type="submit"] {
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    color: #025281;
+}
+
+.formularioC input[type="submit"]:hover {
+    background: #81021A;
+    color: #fff;
+    border: #fff solid 2px;
+}
+
+
+/* -------------------------------sesion-registrarse------------------------------------- */
+
+.sesion p,
+.registrarse p {
+    color: #000;
+    font-size: 18px;
+    padding: 6px;
+    margin: 5px;
+}
+
+.sesion a,
+.registrarse a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #81021A;
+    padding: 5px;
+    margin: 12px;
+    border: #81021A solid 3px;
+    border-radius: 5px;
+}
+
+.sesion a:hover,
+.registrarse a:hover {
+    background: #670A1C;
+    color: #fff;
+}
+
+.sesionT a,
+.registrarseT a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    padding: 10px 5px;
+    margin: 15px;
+}
+
+.sesionT a:hover,
+.registrarseT a:hover {
+    background: #2E5D7C;
+    color: #fff;
+}
+
+.sidebar,
+.sidebarT {
+    width: 25%;
+    padding: 30px 0;
+}
+
+.sidebarT .logo a .fractal {
+    position: fixed;
+    top: 10%;
+    left: 3.2%;
+    padding: 10px;
+}
+
+.sidebarT .logo a .nombre {
+    position: fixed;
+    top: 35%;
+    left: 6.6%;
+}
+
+.sidebar .nombre,
+.sidebarT .nombre {
+    width: 160px;
+}
+
+.sidebarT .sesionT {
+    position: fixed;
+    top: 48%;
+    left: 6.5%;
+}
+
+.sidebarT .registrarseT {
+    position: fixed;
+    top: 55%;
+    left: 7.4%;
+}
+
+.registro,
+.login {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2E5D7C;
+    margin: 0;
+    padding: 0;
+}
+
+.Terminos {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2E5D7C;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 65%;
+    padding: 10px 20px;
+    background: #fff;
+    border: #000 solid 2px;
+    border-radius: 10px;
+}
+
+.containerT {
+    width: 85%;
+    padding: 20px;
+    background: #fff;
+    border: #000 solid 2px;
+    border-radius: 10px;
+}
+
+.containerT h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebarT .sesionT,
+.sidebarT .registrarseT {
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebarT .sesionT a,
+.sidebarT .registrarseT a {
+    text-decoration: none;
+    color: #81021A;
+    padding: 5px;
+    margin: 5px;
+    border: #81021A solid 3px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.sidebarT .sesionT a:hover,
+.sidebarT .registrarseT a:hover {
+    background: #670A1C;
+    color: #fff;
+}
+
+.container h2 {
+    width: 100%;
+    color: #000;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container .row {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container .row .col {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+
+.container .row .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #2E5D7C;
+}
+
+.container .row .inputBox input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.container .row .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.container .row .inputBox input:focus+.text,
+.container .row .inputBox input:valid+.text {
+    top: -35px;
+    left: -10px;
+}
+
+.container .row .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    transition: 0.5s;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.container .row .inputBox input:focus~.line,
+.container .row .inputBox input:valid~.line {
+    height: 100%;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #2290D9;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+input[type="submit"]:hover {
+    background: #0870B5;
+}
+
+.enviar {
+    text-align: center;
+}
+
+.sesion,
+.registrarse {
+    text-align: center;
+}
+
+.condiciones {
+    padding: 10px;
+    font-size: 18px;
+    color: #2E5D7C;
+}
+
+.article p {
+    padding: 20px;
+    margin: 10px;
+}
+
+
+/* -----------------------------footer----------------------------- */
+
+.Registro,
+.Sesion {
+    /* background: #000; */
+    position: absolute;
+    bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.Terminosf {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.landingf {
+    text-align: center;
+    /* color: #fff; */
+    background: #fff;
+    padding: 20px;
+}
+
+@media screen and (max-width:1050px) {
+    .sidebarT .logo a .fractal {
+        top: 14%;
+        width: 220px;
+        left: 2.2%;
+    }
+    .sidebarT .logo a .nombre {
+        width: 150px;
+        left: 6.2%;
+    }
+    .sidebarT .sesionT {
+        position: fixed;
+        /* top: 48%; */
+        left: 5.5%;
+    }
+    .sidebarT .registrarseT {
+        position: fixed;
+        /* top: 55%; */
+        left: 6.6%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .sidebarT .logo .fractal {
+        width: 200px;
+    }
+    .sidebarT .logo a .fractal {
+        position: fixed;
+        left: 2%;
+        padding: 8px;
+    }
+    .sidebarT .logo a .nombre {
+        position: fixed;
+        top: 35%;
+        left: 5%;
+    }
+    .sidebarT .sesionT {
+        position: fixed;
+        top: 48%;
+        left: 5%;
+    }
+    .sidebarT .registrarseT {
+        position: fixed;
+        top: 55%;
+        left: 6%;
+    }
+    .landing .bloque2 .secciones .primera {
+        width: 50%;
+        padding: 60px 20px;
+    }
+    .landing .bloque2 .secciones .segunda {
+        width: 50%;
+    }
+    .landing .bloque2 .secciones .segunda img {
+        width: 400px;
+    }
+    .landing .bloque3 .primera {
+        width: 35%;
+    }
+    .landing .bloque3 .primera img {
+        width: 320px;
+    }
+    .landing .bloque3 .segunda {
+        width: 65%;
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 24%;
+    }
+    .registro,
+    .login {
+        width: 76%;
+    }
+    .sidebarT .logo a .fractal {
+        width: 180px;
+        position: fixed;
+        top: 18%;
+        left: 3.2%;
+    }
+    .sidebarT .logo a .nombre {
+        width: 140px;
+        /* top: 30%; */
+        left: 6.6%;
+    }
+    .sidebar .logo .fractal {
+        width: 150px;
+    }
+    .container .row .inputBox {
+        width: 90%;
+    }
+    .container .row .inputBox input {
+        width: 100%;
+        height: 100%;
+    }
+    .landing .bloque3 {
+        padding: 10px;
+    }
+    .landing .bloque3 .primera img {
+        width: 280px;
+    }
+    .segunda .formularioC {
+        width: 94%;
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar,
+    .sidebarT {
+        width: 0;
+        display: none;
+    }
+    .SesionI,
+    .RegistroI {
+        display: block;
+        background: #fff;
+    }
+    .registro,
+    .login,
+    .Terminos {
+        width: 100%;
+    }
+    .Terminos {
+        padding: 100px 0 20px 0;
+    }
+    .landing .bloque2 {
+        padding: 20px;
+    }
+    .landing .bloque2 .secciones .primera {
+        width: 100%;
+        padding: 20px 20px 50px 20px;
+        font-size: 20px;
+    }
+    .landing .bloque2 .secciones .segunda {
+        width: 100%;
+    }
+    .landing .bloque2 .secciones .segunda img {
+        width: 440px;
+        padding: 0 0 10px 0;
+    }
+    .landing .bloque3 .primera {
+        width: 100%;
+        padding: 20px 0;
+    }
+    .landing .bloque3 .segunda {
+        width: 100%;
+        /* padding: 10px; */
+    }
+    .landing .bloque3 .primera img {
+        width: 360px;
+    }
+    .registro {
+        margin: 40px 0 0 0;
+    }
+    .Registro {
+        bottom: -5%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+    nav .inicio {
+        padding: 12px;
+    }
+    nav .registrar,
+    nav .sesionr,
+    nav .sesionTer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    nav .registrar a,
+    nav .sesionr a {
+        padding: 1em;
+    }
+    .sesion .container,
+    .registro .container {
+        width: 85%;
+    }
+    .registro {
+        margin: 100px 0 0 0;
+    }
+    .Registro {
+        bottom: -15%;
+    }
+    .Terminos {
+        padding: 140px 0 20px 0;
+    }
+    .landing .bloque1 {
+        padding: 130px 20px 60px 20px;
+    }
+    .landing .bloque1 .texto {
+        padding: 20px;
+        font-size: 20px;
+    }
+    .landing .bloque1 .primerImg img {
+        width: 450px;
+    }
+    .landing .bloque1 .primerImg,
+    .landing .bloque2 .segundaImg {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .registro .container {
+        margin: 50px 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container .row .inputBox {
+        width: 80%;
+    }
+    .logolfm img {
+        width: 250px;
+    }
+    .landing .bloque1 .primerImg img {
+        width: 320px;
+    }
+    .landing .bloque2 .secciones .segunda img {
+        width: 320px;
+    }
+    .landing .bloque3 .primera img {
+        width: 320px;
+    }
+    .Terminosf {
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .landing .bloque1 .primerImg,
+    .landing .bloque2 .segundaImg {
+        padding: 15px 5px;
+    }
+    .landing .bloque1 .primerImg img {
+        width: 250px;
+    }
+    .landing .bloque2 .secciones .segunda img {
+        width: 250px;
+    }
+    .landing .bloque3 .primera img {
+        width: 250px;
+    }
+    .container {
+        width: 80%;
+        padding: 0px;
+    }
+    .container .row .inputBox {
+        width: 100%;
+    }
+    header nav img {
+        width: 200px;
+    }
+    nav .registrar a {
+        padding: 0.3em;
+    }
+    .condiciones {
+        font-size: 15px;
+    }
+    .registro {
+        margin: 90px 0 0 0;
+    }
+    .Registro {
+        font-size: 14px;
+        bottom: -12%;
+    }
+    .Sesion {
+        font-size: 14px;
+        bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .logolfm img {
+        width: 200px;
+    }
+    header .inicio a {
+        text-decoration: none;
+        color: #81021A;
+        padding: 5px;
+        margin: 5px;
+        font-size: 14px;
+    }
+    .registro .container {
+        margin: -20px 0 0 0;
+    }
+    .segunda .formularioC {
+        width: 96%;
+        padding: 5px;
+        margin: 0;
+    }
+    .formularioC .rowC .colC {
+        margin: 25px 0 10px;
+    }
+    .formularioC .rowC .box input,
+    .formularioC .rowC .textarea textarea {
+        font-size: 14px;
+        padding: 0 4px;
+    }
+    .formularioC .rowC .box .textC {
+        line-height: 35px;
+        font-size: 16px;
+        padding: 0 5px;
+    }
+    .formularioC input[type="submit"] {
+        padding: 8px 30px;
+    }
+    .container .row {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    input[type="submit"] {
+        padding: 7px 25px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .container h2 {
+        font-size: 20px;
+        padding: 5px 5px 0 5px;
+        margin-bottom: 0px;
+    }
+    .login {
+        min-height: 100vh;
+        margin: 0;
+    }
+    .container .row .col {
+        padding: 0 5px;
+        margin: 25px 0 10px;
+        transition: 0.5s;
+    }
+    .container .row .inputBox input {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+    .container .row .inputBox .text {
+        line-height: 40px;
+        font-size: 16px;
+        padding: 0 5px;
+    }
+    .Registro {
+        bottom: -14%;
+    }
+    .Sesion {
+        bottom: 5%;
+    }
+}
