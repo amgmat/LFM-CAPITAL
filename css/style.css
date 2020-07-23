@@ -634,8 +634,8 @@ input[type="submit"]:hover {
     }
     .sidebarT .logo a .fractal {
         position: fixed;
-        left: 2%;
-        padding: 8px;
+        left: 1.2%;
+        padding: 6px;
     }
     .sidebarT .logo a .nombre {
         position: fixed;
